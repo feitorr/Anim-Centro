@@ -1,0 +1,181 @@
+/* Contato - Seção Principal */
+.contact-section {
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo do container geral */
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Formulário de Contato */
+  .form-container {
+    flex: 1 1 45%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-container h2 {
+    font-size: 2rem;
+    color: #2d3e50;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form label {
+    font-size: 1.1rem;
+    color: #2d3e50;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .submit-button {
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #455f7a;
+  }
+  
+  .form-status {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #28a745;
+  }
+  
+  /* Informações de Contato */
+  .contact-info {
+    flex: 1 1 45%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    color: #2d3e50;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3e50;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .form-container, .contact-info {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Informações de Contato */
+.contact-info {
+    flex: 1 1 45%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    color: #2d3e50;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3e50;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contact-info p svg {
+    color: #2d3e50;
+    margin-right: 10px;
+    font-size: 1.3rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .form-container, .contact-info {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Redes Sociais */
+.social-media {
+    margin-top: 40px;
+  }
+  
+  .contact-info h3 {
+    font-size: 20px;
+    color: #2d3e50;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 2rem;
+    color: #2d3e50;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #455f7a;
+  }
+  
+  
+  
