@@ -1,164 +1,162 @@
-
 .header {
-    position: fixed;
-    top: 0;
-    z-index: 50;
-    background-color: transparent; /* Fundo transparente inicialmente */
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: transparent;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Transição para a altura */
+}
+
+.header.scrolled {
+  background-color: #242424;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link.active {
+  color: rgb(209, 208, 208); /* Cor igual ao efeito de hover */
+  font-weight: bold; /* Você pode adicionar outras propriedades para destacar o link */
+}
+
+.nav-link.active::after {
+  width: 100%; /* A linha do "hover" também será visível no link ativo */
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(209, 208, 208);
+  transform: scale(1.05);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, white, white);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon.open .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsividade - Menu abaixo do logo */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
-    
-  }
-  
-  /* Header após scroll (fundo sólido) */
-  .header.scrolled {
-    background-color: #242424; /* Fundo ao dar scroll */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra leve para destaque */
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
   }
-  
+
+  .nav.open {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 509px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    transform: translateY(-100%);
+  }
+
+  .nav.open {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .menu-button {
+    display: block;
+  }
+
   .logo img {
-    height: 70px;
+    height: 50px;
     width: auto;
   }
-  
-  .nav {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    position: relative; /* Necessário para a linha animada */
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #60a5fa; /* Um azul claro para o hover */
-    transform: scale(1.05); /* Leve efeito de zoom */
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Espaço entre o texto e a linha */
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, #60a5fa, #1d4ed8); /* Gradiente para a linha */
-    transition: width 0.3s ease;
-  }
-  
-  .nav-link:hover::after {
-    width: 100%; /* Linha se expande completamente no hover */
-  }
-  
-  .menu-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 60;
-  }
-  
-  /* Estilo para o ícone do menu */
-  .menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-  }
-  
-  .bar {
-    background-color: white;
-    height: 3px;
-    width: 100%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  /* Animação para o ícone de hamburger se transformando em X */
-  .menu-icon.open .bar:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-  }
-  
-  .menu-icon.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-icon.open .bar:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  
-  /* Responsividade - Menu abaixo do logo */
-  @media (max-width: 768px) {
-    .nav {
-      display: none; /* Menu oculto por padrão */
-      flex-direction: column;
-      gap: 1rem;
-      position: absolute;
-      top: 80px; /* Menu logo abaixo do logo */
-      left: 0; /* Alinhado à esquerda */
-      width: 100%; /* O menu ocupa toda a largura disponível */
-      max-width: 1200px; /* Limita a largura do menu para a mesma largura do contêiner */
-      margin: 0 auto; /* Centraliza o menu com base no contêiner */
-      padding: 1rem;
-      transform: translateY(-100%); /* Menu começa oculto acima da tela */
-      transition: transform 0.3s ease; /* Animação suave */
-    }
-  
-    .nav.open {
-      display: flex; /* Menu visível quando aberto */
-      transform: translateY(0); /* Menu desce suavemente */
-    }
-  
-    .menu-button {
-      display: block;
-    }
-
-  }
-  
-  @media (max-width: 509px) {
-    .nav {
-      display: none; /* Menu oculto por padrão */
-      flex-direction: column;
-      gap: 1rem;
-      position: absolute;
-      top: 80px; /* Menu logo abaixo do logo */
-      left: 0; /* Alinhado à esquerda */
-      width: 100%; /* O menu ocupa toda a largura disponível */
-      max-width: 100%; /* Menu com largura total */
-      padding: 1rem;
-      transform: translateY(-100%); /* Menu começa oculto acima da tela */
-      transition: transform 0.3s ease; /* Animação suave */
-      .header {
-        height: 250px;
-      }
-    }
-  
-    .nav.open {
-      display: flex; /* Menu visível quando aberto */
-      transform: translateY(0); /* Menu desce suavemente */
-    }
-  
-    .menu-button {
-      display: block;
-    }
-  
-    .logo img {
-      height: 50px;
-      width: auto;
-    }
-    
-  }
-  
+}

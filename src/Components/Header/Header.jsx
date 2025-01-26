@@ -2,16 +2,19 @@ import './Header.css';
 import { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import logo from "../Header/logo2.png";
-import { Link } from "react-router-dom";
+
 function Header() {
   // Estado para controlar a exibição do menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Estado para controlar a mudança de fundo ao rolar
   const [isScrolled, setIsScrolled] = useState(false);
+  // Estado para controlar a altura do header
+  const [headerHeight, setHeaderHeight] = useState('100px'); // Altura padrão
 
   // Função para alternar o estado do menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setHeaderHeight(isMenuOpen ? '100px' : '240px'); // Quando o menu está aberto, aumenta a altura
   };
 
   // Função para detectar o scroll e aplicar a classe scrolled
@@ -33,34 +36,46 @@ function Header() {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header 
+      className={`header ${isScrolled ? 'scrolled' : ''}`} 
+      style={{ height: headerHeight }} // Aplicando a altura dinâmica
+    >
       <div className="container">
         {/* Logo */}
         <div className="logo">
-        <Link to="/">
-          <img
-            src={logo} // Substitua por seu caminho de logo
-            alt="Logo"
-          />
-          </Link>
+          <NavLink to="/">
+            <img
+              src={logo} // Substitua por seu caminho de logo
+              alt="Logo"
+            />
+          </NavLink>
         </div>
 
-        {/* Navigation */}
+         {/* Navigation */}
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-          <a href="/sobrenos" className="nav-link">
-            SOBRE NÓS
-          </a>
-          <a href="#" className="nav-link">
-            OS NOSSO SERVIÇOS
-          </a>
-          <a href="#" className="nav-link">
-            CONTATOS
-          </a>
-        </nav>
+  <NavLink 
+    to="/sobrenos" 
+    className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+  >
+    SOBRE NÓS
+  </NavLink>
+  <NavLink 
+    to="/servicos" 
+    className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+  >
+    AS NOSSAS ATIVIDADES
+  </NavLink>
+  <NavLink 
+    to="/contatos" 
+    className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+  >
+    CONTATOS
+  </NavLink>
+</nav>
 
         {/* Mobile Menu Button */}
         <button className="menu-button" onClick={toggleMenu} aria-label="Abrir menu">
-          {/* Icone de menu (hamburger) que vira em X quando o menu é aberto */}
+          {/* Ícone de menu (hamburger) que vira em X quando o menu é aberto */}
           <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`}>
             <span className="bar"></span>
             <span className="bar"></span>
