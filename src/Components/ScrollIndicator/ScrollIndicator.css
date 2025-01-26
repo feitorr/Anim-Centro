@@ -1,0 +1,28 @@
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; /* Ajuste a posição conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+  }
+  
+  .scroll-arrow {
+    font-size: 60px;
+    margin-top: 5px;
+    animation: bounce 1.5s infinite; /* Animação de pulsação */
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  
