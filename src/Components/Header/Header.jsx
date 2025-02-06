@@ -63,7 +63,7 @@ function Header() {
     to="/servicos" 
     className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
   >
-    AS NOSSAS ATIVIDADES
+    OS NOSSOS SERVIÇOS
   </NavLink>
   <NavLink 
     to="/contatos" 

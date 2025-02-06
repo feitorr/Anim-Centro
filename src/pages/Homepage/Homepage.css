@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Faz o vídeo cobrir toda a área sem distorção */
-    filter: brightness(0.5); /* Aplica o filtro para escurecer o vídeo */
+    filter: brightness(0.4); /* Aplica o filtro para escurecer o vídeo */
   }
   
   /* Estilo do texto "Bem-vindo" */

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Sobre_Nos.css"; 
 import Header from "../../Components/Header/Header";
-import video from "../Homepage/video_background.mp4";
+import video from "../Homepage/video_background2.mp4";
 import ScrollIndicator from "../../Components/ScrollIndicator/ScrollIndicator";
 import AOS from "aos";
 import "aos/dist/aos.css";
