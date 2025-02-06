@@ -71,6 +71,12 @@ function Header() {
   >
     CONTATOS
   </NavLink>
+  <NavLink 
+    to="/admin" 
+    className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+  >
+    LOGIN
+  </NavLink>
 </nav>
 
         {/* Mobile Menu Button */}
