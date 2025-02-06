@@ -45,6 +45,7 @@ const Crud_S = () => {
       .getPublicUrl(filePath); // Obtém a URL pública da imagem
   
     return data.publicUrl;
+    
   };
 
   // Função para adicionar um novo serviço
