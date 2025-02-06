@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import "./Homepage.css"; // Para incluir os estilos
-import video from "../Homepage/video_background.mp4";
+import video from "../Homepage/video_background2.mp4";
 import ScrollIndicator from "../../Components/ScrollIndicator/ScrollIndicator";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../../Components/Footer/Footer";
+import Carrosel from "../../Components/Carrrosel/Carrosel";
 
 const Homepage = () => {
   useEffect(() => {
@@ -54,7 +55,10 @@ const Homepage = () => {
             SABER MAIS
           </button>
         </NavLink>
+        <h1>OS NOSSOS SERVIÇOS</h1>
+        <Carrosel/>
       </div>
+      
       <Footer/>
     </>
   );

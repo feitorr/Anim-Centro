@@ -43,8 +43,9 @@
     padding: 10px;
     font-size: 1.1rem;
     border-radius: 5px;
-    box-sizing: border-box;
+    border: none;
     margin-top: 5px;
+    text-decoration: none;
   }
   
   .contact-form textarea {
