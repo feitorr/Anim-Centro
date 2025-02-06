@@ -4,7 +4,7 @@ import SobreNos from './pages/SobreNos/SobreNos'
 import Servicos from './pages/Servicos/Servicos';
 import Contatos from './pages/Contatos/Contatos';
 import AdminPanel from './pages/AdminPanel/AdminPanel';
-import Crud_S from './Components/CRUD_S/CRUD_S';
+import CrudS from './Components/CrudS/CrudS';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/crudS" element={<Crud_S />} />
+          <Route path="/crudS" element={<CrudS />} />
         </Routes>
       </BrowserRouter>
     </div>
