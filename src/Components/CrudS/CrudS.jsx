@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from "../../Components/supabaseClient";
 import Sidebar_admin from '../../Components/Sidebar_admin/Sidebar_admin';
-import './Crud_S.css';
+import './CrudS.css';
 import Swal from 'sweetalert2';
 
-const Crud_S = () => {
+const CrudS = () => {
   const [servicos, setServicos] = useState([]);
   const [titulo, setTitulo] = useState('');
   const [primeiraDescricao, setPrimeiraDescricao] = useState('');
@@ -331,4 +331,4 @@ const Crud_S = () => {
   );
 };
 
-export default Crud_S;
+export default CrudS;
