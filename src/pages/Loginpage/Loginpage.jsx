@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import Swal from "sweetalert2"; 
 import { supabase } from "../../Components/supabaseClient";
-import "./Loginpage.css";
+import './LoginPage.css'
 import video from "../Homepage/video_background2.mp4";
 
 const Loginpage = () => {
