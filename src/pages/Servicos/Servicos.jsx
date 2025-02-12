@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import "./Servicos.css";
 import Header from "../../Components/Header/Header";
 import video from "../Homepage/video_background2.mp4";
 import ScrollIndicator from "../../Components/ScrollIndicator/ScrollIndicator";
 import Footer from "../../Components/Footer/Footer";
 import { motion } from "framer-motion";
-import { supabase } from "../../Components/supabaseClient"; 
+import { supabase } from "../../Components/supabaseClient";
 
 const Servicos = () => {
   const [services, setServices] = useState([]);
+  const navigate = useNavigate(); // Hook para navegação
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -16,7 +18,6 @@ const Servicos = () => {
       if (error) {
         console.error("Erro ao buscar serviços:", error);
       } else {
-        console.log("Dados recebidos:", data);
         setServices(data);
       }
     };
@@ -41,12 +42,13 @@ const Servicos = () => {
 
       <div className="services-container">
         <div className="services-grid">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
-              key={index}
+              key={service.id}
               className="service-card"
               whileHover={{ scale: 1.05 }}
               data-aos="fade-up"
+              onClick={() => navigate(`/cardinfo/${service.id}`)} // Navega para a página do serviço
             >
               <div className="service-image-wrapper">
                 <img src={service.imagem} alt={service.titulo} className="service-image" />

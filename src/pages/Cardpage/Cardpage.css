@@ -1,0 +1,95 @@
+.welcome-text {
+    text-transform: uppercase;
+  }
+  
+  .service-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box; /* Garante que paddings e bordas não ultrapassem o limite */
+  }
+  
+  .service-detail-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    word-break: break-word; /* Alternativa para garantir quebra */
+    white-space: normal; /* Garante que o texto quebre */
+    max-width: 100%; /* Garante que o texto não ultrapasse o container */
+  }
+  
+  .service-details h2 {
+    font-size: 2.5rem;
+    color: #2d3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .service-details h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2d3e50;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .service-details p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Estilo para links ou botões adicionais, se necessário */
+  .service-details a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2d3e50;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-details a:hover {
+    background-color: #1a2633;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .service-details {
+      padding: 20px;
+    }
+  
+    .service-detail-image {
+      max-height: 300px;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .service-details h2 {
+      font-size: 2rem;
+    }
+  }

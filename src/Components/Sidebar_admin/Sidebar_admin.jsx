@@ -5,8 +5,8 @@ const Sidebar_admin = () => {
   return (
     <>
       <div className="container_admin">
-        <Link to="/admin">
-          <img src={logo} alt="Rizzland" />
+        <Link to="/">
+          <img src={logo}  />
         </Link>
         <div className="btn">
           <div className="botoes">
@@ -15,13 +15,13 @@ const Sidebar_admin = () => {
             </Link>
           </div>
           <div className="botoes">
-          <Link to="/stock">
+          <Link to="/crudU">
               <button>UTILIZADORES</button>
             </Link>
           </div>
           <div className="botoes">
           <Link to="/vendidos">
-            <button>Vendidos</button>
+            <button>SOBRE NÓS</button>
             </Link>
           </div>
           <div className="botoes">

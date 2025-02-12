@@ -72,7 +72,7 @@ function Header() {
     CONTATOS
   </NavLink>
   <NavLink 
-    to="/admin" 
+    to="/login" 
     className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
   >
     LOGIN
