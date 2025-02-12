@@ -69,7 +69,7 @@ const Cardpage = () => {
   ))}
 </p>
 </div>
-
+ 
       <Footer />
     </>
   );
