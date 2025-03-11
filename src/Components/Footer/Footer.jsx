@@ -21,12 +21,12 @@ function Footer() {
          {/* Informações de contato */}
          <div className="footer-contact">
           <p>
-            <FaPhoneAlt /> <span>+351 123 456 789</span>
+            <FaPhoneAlt /> <span>+351 962 403 748</span>
           </p>
           <p>
-            <FaEnvelope /> <span>contato@animocentro.pt</span>
+            <FaEnvelope /> <span>turismoanimocentro@gmail.com</span>
           </p>
-          <p>Rua dos Animais Felizes, nº 42, Lisboa, Portugal</p>
+          <p>Centro Comercial D. Dinis, Avenida Fernão de Magalhães</p>
         </div>
 
         {/* Redes sociais */}
@@ -34,10 +34,10 @@ function Footer() {
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footer-social-link">
             <FaFacebook />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+          <a href="https://www.instagram.com/animocentro/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
             <FaInstagram />
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+          <a href="https://www.linkedin.com/in/turismo-anim%C3%B3centro-473553347/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
             <FaLinkedin />
           </a>
         </div>

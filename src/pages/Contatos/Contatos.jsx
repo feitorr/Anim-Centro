@@ -49,7 +49,7 @@ const Contatos = () => {
             <source src={video} type="video/mp4" />
           </video>
           <div className="welcome-text">
-            <h1>CONTATOS</h1>
+            <h1>CONTACTOS</h1>
           </div>
         </div>
       </div>
@@ -60,14 +60,14 @@ const Contatos = () => {
           {/* Informações de contato */}
           <div className="contact-info" data-aos="fade-up">
             <h2>INFORMAÇÕES DE CONTATO</h2>
-            <p><FaPhoneAlt />  +351 123 456 789</p>
-            <p><FaEnvelope />  contato@animocentro.pt</p>
-            <p><FaMapMarkerAlt />  Rua dos Monhés, nº 42, Coimbra, Portugal</p>
+            <p><FaPhoneAlt />  +351 962 403 748</p>
+            <p><FaEnvelope />  turismoanimocentro@gmail.com</p>
+            <p><FaMapMarkerAlt /> Centro Comercial D. Dinis, Avenida Fernão de Magalhães</p>
             <h3>REDES SOCIAIS</h3>
             <div className="social-icons">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+              <a href="https://www.instagram.com/animocentro/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/turismo-anim%C3%B3centro-473553347/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
             </div>
           </div>
 
