@@ -29,13 +29,16 @@ const SobreNos = () => {
       <div className="sobre-nos-container">
         <h1 data-aos="fade-up">SOBRE A ANIMÓCENTRO</h1>
         <p data-aos="fade-up">
-          A AnimÓCentro é uma empresa de animação turística que visa atender à escassez de atividades desta tipologia no Centro de Portugal.
+        Conheça a AnimÓCentro, o centro da animação! 
         </p>
         <p data-aos="fade-up">
-          Com balcão de atendimento físico na região de Coimbra, esta iniciativa pretende diversificar a oferta turística da região Centro, atrair mais visitantes, incentivá-los a explorar as riquezas culturais e naturais da Entidade Regional em que está inserida.
+        A AnimÓCentro é uma empresa de animação turística criada por duas sócias com o objetivo de tornar a sua estadia no Centro de Portugal ainda mais especial.
         </p>
         <p data-aos="fade-up">
-          Ao apresentarmos um conjunto diversificado de atividades de animação, possibilitamos também um aumento do tempo médio de permanência dos turistas na cidade de Coimbra, complementando a sua estadia com experiências memoráveis que particularizam o nosso território. Todos estes fatores impulsionam significativamente o desenvolvimento económico da região de Coimbra, classificando o Centro de Portugal como um destino de férias atrativo e vibrante.
+        complementam a sua visita, proporcionando experiências autênticas e memoráveis, que ajudam a descobrir o que torna esta região única. 
+        </p>
+        <p data-aos="fade-up">
+        Queremos que cada visitante leve para casa não apenas boas recordações, mas também uma verdadeira ligação ao Centro de Portugal.
         </p>
         <h2 data-aos="fade-up">MISSÃO</h2>
         <p data-aos="fade-up">

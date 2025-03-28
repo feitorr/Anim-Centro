@@ -59,7 +59,7 @@ const Contatos = () => {
 
           {/* Informações de contato */}
           <div className="contact-info" data-aos="fade-up">
-            <h2>INFORMAÇÕES DE CONTATO</h2>
+            <h2>INFORMAÇÕES DE CONTACTO</h2>
             <p><FaPhoneAlt />  +351 962 403 748</p>
             <p><FaEnvelope />  turismoanimocentro@gmail.com</p>
             <p><FaMapMarkerAlt /> Centro Comercial D. Dinis, Avenida Fernão de Magalhães</p>
